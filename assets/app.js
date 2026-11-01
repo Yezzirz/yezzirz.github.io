@@ -11,14 +11,13 @@
       theme.setAttribute('aria-label', value === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro');
     }
   }
-  const system = window.matchMedia('(prefers-color-scheme: dark)');
-  applyTheme(preferred === 'light' || preferred === 'dark' ? preferred : system.matches ? 'dark' : 'light');
+  // The HUD identity starts dark; an explicitly saved preference takes precedence.
+  applyTheme(preferred === 'light' || preferred === 'dark' ? preferred : 'dark');
   theme?.addEventListener('click', () => {
     preferred = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     applyTheme(preferred);
     try { localStorage.setItem('oa-theme', preferred); } catch { /* Theme still works in memory. */ }
   });
-  system.addEventListener('change', (event) => { if (!preferred) applyTheme(event.matches ? 'dark' : 'light'); });
 
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#primary-nav');

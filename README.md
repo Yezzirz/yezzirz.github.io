@@ -5,6 +5,8 @@ Portfólio profissional estático com projetos, quatro estudos de caso, competê
 **Site:** https://yezzirz.github.io/  
 **Perfil:** https://github.com/Yezzirz
 
+Identidade visual original de HUD/MMORPG futurista, com tema escuro padrão e alternativa clara. Tokens, componentes e regras de movimento estão em [docs/design-system.md](docs/design-system.md).
+
 ## Executar localmente
 
 Não há dependências para instalar nem etapa de build. Use Node.js 22 ou mais recente:
