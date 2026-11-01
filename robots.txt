@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yezzirz.github.io/sitemap.xml
